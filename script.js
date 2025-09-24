@@ -98,12 +98,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Email click
                 window.location.href = 'mailto:' + this.textContent;
             } else if (this.textContent.includes('+')) {
-                // Phone click
-                navigator.clipboard.writeText(this.textContent).then(() => {
-                    showNotification('Phone number copied to clipboard!', 'success');
-                }).catch(() => {
-                    showNotification('Failed to copy phone number', 'error');
-                });
+                // Phone click - Open WhatsApp
+                const phoneNumber = this.textContent.replace(/\D/g, ''); // Remove non-digits
+                const whatsappUrl = `https://wa.me/${phoneNumber}`;
+                window.open(whatsappUrl, '_blank');
             }
         });
     });

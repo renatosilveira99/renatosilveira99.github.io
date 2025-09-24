@@ -840,7 +840,7 @@ p {
 }
 
 .whatsapp-link {
-    color: #25D366;
+    color: #25D366 !important;
     font-size: var(--font-size-lg);
     text-decoration: none;
     transition: transform var(--transition-fast);
@@ -850,7 +850,7 @@ p {
 
 .whatsapp-link:hover {
     transform: scale(1.1);
-    color: #128C7E;
+    color: #128C7E !important;
 }
 
 .social-links {
