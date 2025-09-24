@@ -89,38 +89,131 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Contact form handling
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
-            
-            // Simple validation
-            if (!name || !email || !subject || !message) {
-                alert('Please fill in all fields.');
-                return;
+    // Contact information click handlers
+    const contactItems = document.querySelectorAll('.contact-item span');
+    contactItems.forEach(item => {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function() {
+            if (this.textContent.includes('@')) {
+                // Email click
+                window.location.href = 'mailto:' + this.textContent;
+            } else if (this.textContent.includes('+')) {
+                // Phone click
+                navigator.clipboard.writeText(this.textContent).then(() => {
+                    showNotification('Phone number copied to clipboard!', 'success');
+                }).catch(() => {
+                    showNotification('Failed to copy phone number', 'error');
+                });
             }
-            
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                alert('Message sent successfully! I\'ll get back to you soon.');
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
         });
+    });
+
+    // Notification system
+    function showNotification(message, type = 'info') {
+        // Remove existing notifications
+        const existingNotifications = document.querySelectorAll('.notification');
+        existingNotifications.forEach(notification => notification.remove());
+        
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <div class="notification-content">
+                <span class="notification-message">${message}</span>
+                <button class="notification-close">&times;</button>
+            </div>
+        `;
+        
+        // Add styles
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            z-index: 10000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            max-width: 400px;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Animate in
+        setTimeout(() => {
+            notification.style.transform = 'translateX(0)';
+        }, 100);
+        
+        // Close button functionality
+        const closeBtn = notification.querySelector('.notification-close');
+        closeBtn.addEventListener('click', () => {
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => notification.remove(), 300);
+        });
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }
+        }, 5000);
+    }
+
+    // Language Toggle Functionality
+    const langPtBtn = document.getElementById('lang-pt');
+    const langEnBtn = document.getElementById('lang-en');
+    
+    // Get saved language or default to English
+    let currentLanguage = localStorage.getItem('portfolio-language') || 'en';
+    
+    // Initialize language
+    updateLanguage(currentLanguage);
+    
+    // Add event listeners to both buttons
+    langPtBtn.addEventListener('click', function() {
+        currentLanguage = 'pt';
+        updateLanguage(currentLanguage);
+        localStorage.setItem('portfolio-language', currentLanguage);
+    });
+    
+    langEnBtn.addEventListener('click', function() {
+        currentLanguage = 'en';
+        updateLanguage(currentLanguage);
+        localStorage.setItem('portfolio-language', currentLanguage);
+    });
+    
+    function updateLanguage(lang) {
+        // Update button states
+        if (lang === 'pt') {
+            langPtBtn.classList.add('active');
+            langEnBtn.classList.remove('active');
+        } else {
+            langEnBtn.classList.add('active');
+            langPtBtn.classList.remove('active');
+        }
+        
+        // Update all elements with translation attributes
+        const elementsToTranslate = document.querySelectorAll('[data-en][data-pt]');
+        elementsToTranslate.forEach(element => {
+            const text = element.getAttribute(`data-${lang}`);
+            if (text) {
+                element.textContent = text;
+            }
+        });
+        
+        // Update page title and meta description
+        if (lang === 'pt') {
+            document.title = 'Renato Silveira - Engenheiro de Produto II | Desenvolvedor Full Stack';
+            document.querySelector('meta[name="description"]').setAttribute('content', 
+                'Renato Silveira - Engenheiro de Produto II na Wander | Desenvolvedor Full Stack especializado em Node.js, TypeScript, React e sistemas escaláveis');
+        } else {
+            document.title = 'Renato Silveira - Product Engineer II | Full Stack Developer';
+            document.querySelector('meta[name="description"]').setAttribute('content', 
+                'Renato Silveira - Product Engineer II at Wander | Full Stack Developer specializing in Node.js, TypeScript, React, and scalable systems');
+        }
     }
 
     console.log('Portfolio website loaded successfully! 🚀');

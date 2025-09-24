@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Portfolio - Full Stack Developer specializing in modern web technologies">
-    <meta name="keywords" content="portfolio, developer, web development, full stack, javascript, react, nodejs">
-    <meta name="author" content="Alex Johnson">
-    <title>Alex Johnson - Full Stack Developer</title>
+    <meta name="description" content="Renato Silveira - Product Engineer II at Wander | Full Stack Developer specializing in Node.js, TypeScript, React, and scalable systems">
+    <meta name="keywords" content="portfolio, developer, web development, full stack, javascript, typescript, react, nodejs, wander, kea, holonic">
+    <meta name="author" content="Renato Silveira">
+    <title>Renato Silveira - Product Engineer II | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -18,28 +18,38 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">Alex Johnson</span>
+                <span class="logo-text">Renato Silveira</span>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link" data-en="Home" data-pt="Início">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#about" class="nav-link" data-en="About" data-pt="Sobre">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#skills" class="nav-link" data-en="Skills" data-pt="Habilidades">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#experience" class="nav-link" data-en="Experience" data-pt="Experiência">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#projects" class="nav-link" data-en="Projects" data-pt="Projetos">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link" data-en="Contact" data-pt="Contato">Contact</a>
                 </li>
             </ul>
+            <div class="language-toggle">
+                <button id="lang-pt" class="lang-btn" data-lang="pt">
+                    <span class="lang-flag">🇧🇷</span>
+                    <span class="lang-text">PT</span>
+                </button>
+                <button id="lang-en" class="lang-btn active" data-lang="en">
+                    <span class="lang-flag">🇺🇸</span>
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -54,22 +64,22 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        Hi, I'm <span class="highlight">Alex Johnson</span>
+                        <span data-en="Hi, I'm" data-pt="Olá, eu sou">Hi, I'm</span> <span class="highlight">Renato Silveira</span>
                     </h1>
-                    <h2 class="hero-subtitle">Full Stack Developer</h2>
-                    <p class="hero-description">
-                        I create exceptional digital experiences through clean code, innovative design, 
-                        and cutting-edge technologies. Passionate about building scalable web applications 
-                        that make a difference.
+                    <h2 class="hero-subtitle" data-en="Product Engineer II at Wander" data-pt="Engenheiro de Produto II na Wander">Product Engineer II at Wander</h2>
+                    <p class="hero-description" data-en="I'm a passionate software engineer with over 5 years of experience in full-stack development. Currently building scalable systems at Wander, creating exceptional digital experiences through clean code, microservices, and cutting-edge technologies." data-pt="Sou um engenheiro de software apaixonado com mais de 5 anos de experiência em desenvolvimento full-stack. Atualmente construindo sistemas escaláveis na Wander, criando experiências digitais excepcionais através de código limpo, microsserviços e tecnologias de ponta.">
+                        I'm a passionate software engineer with over 5 years of experience in full-stack development. 
+                        Currently building scalable systems at Wander, creating exceptional digital experiences 
+                        through clean code, microservices, and cutting-edge technologies.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        <a href="#projects" class="btn btn-primary" data-en="View My Work" data-pt="Ver Meus Projetos">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary" data-en="Get In Touch" data-pt="Entre em Contato">Get In Touch</a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="image-container">
-                        <img src="assets/profile.jpeg" alt="Alex Johnson" class="profile-image">
+                        <img src="assets/profile.jpeg" alt="Renato Silveira" class="profile-image">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
@@ -84,41 +94,43 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
+                <h2 class="section-title" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
+                <p class="section-subtitle" data-en="Get to know me better" data-pt="Conheça-me melhor">Get to know me better</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Passionate Developer & Problem Solver</h3>
-                    <p>
-                        With over 5 years of experience in web development, I specialize in creating 
-                        robust, scalable applications using modern technologies. My journey began with 
-                        a curiosity for how things work, which led me to pursue computer science and 
-                        eventually become a full-stack developer.
+                    <h3 data-en="Passionate Software Engineer & Problem Solver" data-pt="Engenheiro de Software Apaixonado & Solucionador de Problemas">Passionate Software Engineer & Problem Solver</h3>
+                    <p data-en="With over 5 years of experience in full-stack development, I specialize in creating robust, scalable applications using modern technologies like Node.js, TypeScript, React, and microservices architecture. My journey began with a curiosity for how things work, which led me to pursue Computer Engineering and eventually become a Product Engineer at Silicon Valley startups." data-pt="Com mais de 5 anos de experiência em desenvolvimento full-stack, me especializo em criar aplicações robustas e escaláveis usando tecnologias modernas como Node.js, TypeScript, React e arquitetura de microsserviços. Minha jornada começou com curiosidade sobre como as coisas funcionam, o que me levou a cursar Engenharia da Computação e eventualmente me tornar um Engenheiro de Produto em startups do Vale do Silício.">
+                        With over 5 years of experience in full-stack development, I specialize in creating 
+                        robust, scalable applications using modern technologies like Node.js, TypeScript, 
+                        React, and microservices architecture. My journey began with a curiosity for how 
+                        things work, which led me to pursue Computer Engineering and eventually become a 
+                        Product Engineer at Silicon Valley startups.
                     </p>
-                    <p>
+                    <p data-en="I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends. Currently working at Wander, I focus on building scalable systems, implementing microservices, and creating exceptional user experiences through innovative technology solutions." data-pt="Acredito em escrever código limpo e sustentável, mantendo-me atualizado com as últimas tendências da indústria. Atualmente trabalhando na Wander, foco em construir sistemas escaláveis, implementar microsserviços e criar experiências de usuário excepcionais através de soluções tecnológicas inovadoras.">
                         I believe in writing clean, maintainable code and staying up-to-date with 
-                        the latest industry trends. When I'm not coding, you can find me contributing 
-                        to open-source projects, writing technical blogs, or exploring new technologies.
+                        the latest industry trends. Currently working at Wander, I focus on building 
+                        scalable systems, implementing microservices, and creating exceptional user 
+                        experiences through innovative technology solutions.
                     </p>
                     <div class="about-stats">
                         <div class="stat">
-                            <h4>50+</h4>
-                            <p>Projects Completed</p>
+                            <h4>5+</h4>
+                            <p data-en="Years Experience" data-pt="Anos de Experiência">Years Experience</p>
                         </div>
                         <div class="stat">
-                            <h4>5+</h4>
-                            <p>Years Experience</p>
+                            <h4>3</h4>
+                            <p data-en="Silicon Valley Companies" data-pt="Empresas do Vale do Silício">Silicon Valley Companies</p>
                         </div>
                         <div class="stat">
                             <h4>100%</h4>
-                            <p>Client Satisfaction</p>
+                            <p data-en="Remote Work Success" data-pt="Sucesso no Trabalho Remoto">Remote Work Success</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
                     <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Alex Johnson working" class="about-img">
+                        <img src="assets/profile-2.jpg" alt="Renato Silveira working" class="about-img">
                     </div>
                 </div>
             </div>
@@ -129,8 +141,8 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">Technologies I work with</p>
+                <h2 class="section-title" data-en="Skills & Technologies" data-pt="Habilidades & Tecnologias">Skills & Technologies</h2>
+                <p class="section-subtitle" data-en="Technologies I work with" data-pt="Tecnologias com as quais trabalho">Technologies I work with</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
@@ -150,15 +162,15 @@
                         </div>
                         <div class="skill-item">
                             <i class="fab fa-react"></i>
-                            <span>React</span>
+                            <span>React.js</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-vue"></i>
-                            <span>Vue.js</span>
+                            <i class="fab fa-react"></i>
+                            <span>Next.js</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-angular"></i>
-                            <span>Angular</span>
+                            <i class="fab fa-react"></i>
+                            <span>React Native</span>
                         </div>
                     </div>
                 </div>
@@ -170,8 +182,16 @@
                             <span>Node.js</span>
                         </div>
                         <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="skill-item">
                             <i class="fab fa-python"></i>
                             <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-database"></i>
@@ -179,20 +199,12 @@
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-database"></i>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>Express.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cloud"></i>
-                            <span>AWS</span>
+                            <span>Redis</span>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools & Others</h3>
+                    <h3>Tools & DevOps</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <i class="fab fa-git-alt"></i>
@@ -203,20 +215,20 @@
                             <span>Docker</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Responsive Design</span>
+                            <i class="fas fa-cloud"></i>
+                            <span>AWS</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-search"></i>
-                            <span>SEO</span>
+                            <i class="fas fa-server"></i>
+                            <span>Kafka</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-paint-brush"></i>
-                            <span>UI/UX Design</span>
+                            <i class="fas fa-cogs"></i>
+                            <span>CI/CD</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Analytics</span>
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Microservices</span>
                         </div>
                     </div>
                 </div>
@@ -228,43 +240,61 @@
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">My professional journey</p>
+                <h2 class="section-title" data-en="Experience" data-pt="Experiência">Experience</h2>
+                <p class="section-subtitle" data-en="My professional journey" data-pt="Minha jornada profissional">My professional journey</p>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Senior Full Stack Developer</h3>
-                        <h4>TechCorp Solutions</h4>
-                        <span class="timeline-date">2022 - Present</span>
-                        <p>
-                            Lead development of enterprise-level web applications using React, Node.js, and AWS. 
-                            Mentored junior developers and implemented CI/CD pipelines that reduced deployment time by 60%.
+                        <div class="company-header">
+                            <img src="assets/wander.jpg" alt="Wander" class="company-logo">
+                            <div class="company-info">
+                                <h3 data-en="Product Engineer II" data-pt="Engenheiro de Produto II">Product Engineer II</h3>
+                                <h4><a href="https://www.wander.com/about" target="_blank" rel="noopener noreferrer">Wander</a></h4>
+                                <span class="timeline-date">Oct 2024 - Present</span>
+                            </div>
+                        </div>
+                        <p data-en="Building scalable systems for luxury vacation rental platform. Developed backend, frontend, and database components for Pricing system, including unit-level pricing, custom rates, and redesigned Owner Pricing Dashboard with market comparison metrics using Cube.js." data-pt="Construindo sistemas escaláveis para plataforma de aluguel de férias de luxo. Desenvolvi componentes de backend, frontend e banco de dados para o sistema de Preços, incluindo preços por unidade, tarifas personalizadas e redesenhei o Painel de Preços do Proprietário com métricas de comparação de mercado usando Cube.js.">
+                            Building scalable systems for luxury vacation rental platform. Developed backend, frontend, 
+                            and database components for Pricing system, including unit-level pricing, custom rates, 
+                            and redesigned Owner Pricing Dashboard with market comparison metrics using Cube.js.
                         </p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Full Stack Developer</h3>
-                        <h4>Digital Innovations Inc.</h4>
-                        <span class="timeline-date">2020 - 2022</span>
-                        <p>
-                            Developed and maintained multiple client projects using modern JavaScript frameworks. 
-                            Collaborated with design teams to create pixel-perfect, responsive user interfaces.
+                        <div class="company-header">
+                            <img src="assets/kea-ai.png" alt="Kea" class="company-logo">
+                            <div class="company-info">
+                                <h3 data-en="Software Engineer" data-pt="Engenheiro de Software">Software Engineer</h3>
+                                <h4><a href="https://kea.ai/" target="_blank" rel="noopener noreferrer">Kea</a></h4>
+                                <span class="timeline-date">Jun 2022 - Jul 2024</span>
+                            </div>
+                        </div>
+                        <p data-en="Created efficient software solutions for voice AI restaurant platform serving 1M+ guests. Innovated secure voice payment bot with PCI compliance, reducing transaction processing time by 50% using Twilio, VGS, and Starlarky." data-pt="Criei soluções de software eficientes para plataforma de restaurante com IA de voz atendendo mais de 1M de clientes. Inovei um bot de pagamento por voz seguro com conformidade PCI, reduzindo o tempo de processamento de transações em 50% usando Twilio, VGS e Starlarky.">
+                            Created efficient software solutions for voice AI restaurant platform serving 1M+ guests. 
+                            Innovated secure voice payment bot with PCI compliance, reducing transaction processing 
+                            time by 50% using Twilio, VGS, and Starlarky.
                         </p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Frontend Developer</h3>
-                        <h4>WebCraft Studio</h4>
-                        <span class="timeline-date">2019 - 2020</span>
-                        <p>
-                            Specialized in creating interactive user interfaces using React and Vue.js. 
-                            Implemented responsive designs and optimized applications for performance.
+                        <div class="company-header">
+                            <img src="assets/holonic.jpeg" alt="Holonic" class="company-logo">
+                            <div class="company-info">
+                                <h3 data-en="Backend Engineer" data-pt="Engenheiro Backend">Backend Engineer</h3>
+                                <h4><a href="https://www.becomeholonic.com/" target="_blank" rel="noopener noreferrer">Holonic</a></h4>
+                                <span class="timeline-date">Feb 2021 - Jun 2022</span>
+                            </div>
+                        </div>
+                        <p data-en="Designed API integration for food ordering app that increased customer engagement by 60%. Developed cutting-edge proof of concept within 6 weeks with 76% user engagement, working with cross-functional teams and Silicon Valley startups." data-pt="Projetei integração de API para aplicativo de pedidos de comida que aumentou o engajamento do cliente em 60%. Desenvolvi prova de conceito de ponta em 6 semanas com 76% de engajamento do usuário, trabalhando com equipes multifuncionais e startups do Vale do Silício.">
+                            Designed API integration for food ordering app that increased customer engagement by 60%. 
+                            Developed cutting-edge proof of concept within 6 weeks with 76% user engagement, 
+                            working with cross-functional teams and Silicon Valley startups.
                         </p>
                     </div>
                 </div>
@@ -276,79 +306,239 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+                <h2 class="section-title" data-en="Featured Projects" data-pt="Projetos em Destaque">Featured Projects</h2>
+                <p class="section-subtitle" data-en="Some of my recent work" data-pt="Alguns dos meus trabalhos recentes">Some of my recent work</p>
             </div>
             <div class="projects-grid">
+                <!-- Rentx -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="E-commerce Platform">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop" alt="Rentx - Car Rental App">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/renatosilveira99/rentx-api" class="project-link" title="API"><i class="fas fa-server"></i></a>
+                                <a href="https://github.com/renatosilveira99/rentx-mobile" class="project-link" title="Mobile App"><i class="fas fa-mobile-alt"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>E-commerce Platform</h3>
-                        <p>
-                            A full-stack e-commerce solution built with React, Node.js, and MongoDB. 
-                            Features include user authentication, payment processing, and admin dashboard.
+                        <h3 data-en="Rentx - Car Rental" data-pt="Rentx - Aluguel de Carros">Rentx - Car Rental</h3>
+                        <p data-en="Complete car rental platform with API and mobile app. Features car booking, user management, and payment integration for a seamless rental experience." data-pt="Plataforma completa de aluguel de carros com API e aplicativo móvel. Recursos de reserva de carros, gerenciamento de usuários e integração de pagamento para uma experiência de aluguel perfeita.">
+                            Complete car rental platform with API and mobile app. Features car booking, 
+                            user management, and payment integration for a seamless rental experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Go Restaurant -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop" alt="Go Restaurant">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/renatosilveira99/go-restaurant-web" class="project-link" title="Web App"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/renatosilveira99/go-restaurant-mobile" class="project-link" title="Mobile App"><i class="fas fa-mobile-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="Go Restaurant" data-pt="Go Restaurant">Go Restaurant</h3>
+                        <p data-en="Restaurant management platform with web and mobile interfaces. Features menu management, order tracking, and real-time updates." data-pt="Plataforma de gerenciamento de restaurante com interfaces web e móvel. Recursos de gerenciamento de cardápio, rastreamento de pedidos e atualizações em tempo real.">
+                            Restaurant management platform with web and mobile interfaces. 
+                            Features menu management, order tracking, and real-time updates.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- World Cup Pools -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&h=400&fit=crop" alt="World Cup Pools">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/renatosilveira99/world-cup-pools" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="World Cup Pools" data-pt="Bolões da Copa do Mundo">World Cup Pools</h3>
+                        <p data-en="Interactive World Cup prediction game where users can create pools, make predictions, and compete with friends during the tournament." data-pt="Jogo interativo de previsões da Copa do Mundo onde os usuários podem criar bolões, fazer previsões e competir com amigos durante o torneio.">
+                            Interactive World Cup prediction game where users can create pools, 
+                            make predictions, and compete with friends during the tournament.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">Socket.io</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Go Finances -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Task Management App">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Go Finances">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/renatosilveira99/go-finances-web" class="project-link" title="Web App"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/renatosilveira99/go-finances-mobile" class="project-link" title="Mobile App"><i class="fas fa-mobile-alt"></i></a>
+                                <a href="https://github.com/renatosilveira99/go-finances-api" class="project-link" title="API"><i class="fas fa-server"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>
-                            A collaborative task management application with real-time updates, 
-                            drag-and-drop functionality, and team collaboration features.
+                        <h3 data-en="Go Finances" data-pt="Go Finances">Go Finances</h3>
+                        <p data-en="Comprehensive financial management platform with web, mobile, and API. Track expenses, income, and financial goals with detailed analytics." data-pt="Plataforma abrangente de gerenciamento financeiro com web, móvel e API. Acompanhe despesas, receitas e metas financeiras com análises detalhadas.">
+                            Comprehensive financial management platform with web, mobile, and API. 
+                            Track expenses, income, and financial goals with detailed analytics.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">PostgreSQL</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Go Barber -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="Weather Dashboard">
+                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&h=400&fit=crop" alt="Go Barber">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/renatosilveira99/go-barber-web" class="project-link" title="Web App"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/renatosilveira99/go-barber-mobile" class="project-link" title="Mobile App"><i class="fas fa-mobile-alt"></i></a>
+                                <a href="https://github.com/renatosilveira99/go-barber-api" class="project-link" title="API"><i class="fas fa-server"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Weather Dashboard</h3>
-                        <p>
-                            A responsive weather application with location-based forecasts, 
-                            interactive maps, and detailed weather analytics.
+                        <h3 data-en="Go Barber" data-pt="Go Barber">Go Barber</h3>
+                        <p data-en="Complete barbershop management system with booking, scheduling, and customer management features for both barbers and clients." data-pt="Sistema completo de gerenciamento de barbearia com recursos de agendamento, programação e gerenciamento de clientes para barbeiros e clientes.">
+                            Complete barbershop management system with booking, scheduling, 
+                            and customer management features for both barbers and clients.
                         </p>
                         <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Be The Hero -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&h=400&fit=crop" alt="Be The Hero">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/renatosilveira99/be-the-hero" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="Be The Hero" data-pt="Seja o Herói">Be The Hero</h3>
+                        <p data-en="Full-stack application connecting NGOs with potential heroes to resolve incidents. Developed during OmniStack 11 with complete web and mobile interfaces." data-pt="Aplicação full-stack conectando ONGs com heróis em potencial para resolver incidentes. Desenvolvido durante o OmniStack 11 com interfaces web e móvel completas.">
+                            Full-stack application connecting NGOs with potential heroes to resolve incidents. 
+                            Developed during OmniStack 11 with complete web and mobile interfaces.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safe Economy -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop" alt="Safe Economy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/renatosilveira99/safe-economy-api" class="project-link" title="API"><i class="fas fa-server"></i></a>
+                                <a href="https://github.com/renatosilveira99/safe-economy-mobile" class="project-link" title="Mobile App"><i class="fas fa-mobile-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="Safe Economy" data-pt="Economia Segura">Safe Economy</h3>
+                        <p data-en="Financial management system for tracking user balance and bills. Built with AdonisJS for Software Engineering course with mobile companion." data-pt="Sistema de gerenciamento financeiro para rastrear saldo do usuário e contas. Construído com AdonisJS para curso de Engenharia de Software com aplicativo móvel.">
+                            Financial management system for tracking user balance and bills. 
+                            Built with AdonisJS for Software Engineering course with mobile companion.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AdonisJS</span>
+                            <span class="tech-tag">React Native</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">API</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In Orbit -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="In Orbit - Productivity App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/renatosilveira99/in.orbit" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="In Orbit" data-pt="Em Órbita">In Orbit</h3>
+                        <p data-en="Productivity app developed during Rocketseat's NLW Pocket event. Helps users track daily goals with clear view of pending and completed tasks." data-pt="Aplicativo de produtividade desenvolvido durante o evento NLW Pocket da Rocketseat. Ajuda os usuários a acompanhar metas diárias com visão clara de tarefas pendentes e concluídas.">
+                            Productivity app developed during Rocketseat's NLW Pocket event. 
+                            Helps users track daily goals with clear view of pending and completed tasks.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Fastify</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IF News -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop" alt="IF News">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/renatosilveira99/IF-News-Server" class="project-link" title="Server"><i class="fas fa-server"></i></a>
+                                <a href="https://github.com/renatosilveira99/IF-News-App" class="project-link" title="Mobile App"><i class="fas fa-mobile-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="IF News" data-pt="IF News">IF News</h3>
+                        <p data-en="News dissemination platform for educational institutions. Features news management, project sharing, and mobile app for students." data-pt="Plataforma de divulgação de notícias para instituições educacionais. Recursos de gerenciamento de notícias, compartilhamento de projetos e aplicativo móvel para estudantes.">
+                            News dissemination platform for educational institutions. 
+                            Features news management, project sharing, and mobile app for students.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express</span>
                         </div>
                     </div>
                 </div>
@@ -360,52 +550,39 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together</p>
+                <h2 class="section-title" data-en="Get In Touch" data-pt="Entre em Contato">Get In Touch</h2>
+                <p class="section-subtitle" data-en="Let's work together" data-pt="Vamos trabalhar juntos">Let's work together</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's discuss your project</h3>
-                    <p>
+                    <h3 data-en="Let's discuss your project" data-pt="Vamos discutir seu projeto">Let's discuss your project</h3>
+                    <p data-en="I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!" data-pt="Sempre estou interessado em novas oportunidades e projetos emocionantes. Se você tem uma pergunta ou apenas quer dizer oi, vou fazer o meu melhor para responder!">
                         I'm always interested in new opportunities and exciting projects. 
                         Whether you have a question or just want to say hi, I'll try my best to get back to you!
                     </p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>alex.johnson@email.com</span>
+                            <span>renatosilveira99@hotmail.com</span>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
+                            <a href="https://wa.me/5535991620993" target="_blank" rel="noopener noreferrer" class="whatsapp-link" title="Enviar mensagem no WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <span>+55 35 99162-0993</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>San Francisco, CA</span>
+                            <span>São Paulo, Brazil</span>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/renato-silveira/" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/renatosilveira99" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:renatosilveira99@hotmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/renatosilveira99" class="social-link" title="GitHub Profile"><i class="fab fa-git-alt"></i></a>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
@@ -415,7 +592,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2025 Alex Johnson. All rights reserved.</p>
+                    <p>&copy; 2025 Renato Silveira. All rights reserved.</p>
                 </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
@@ -430,4 +607,5 @@
     <script src="script.js"></script>
 </body>
 
+</html>
 </html>

@@ -1,6 +1,6 @@
-# Alex Johnson - Professional Portfolio
+# Renato Silveira - Professional Portfolio
 
-A modern, responsive portfolio website showcasing professional web development skills and projects.
+A modern, responsive portfolio website showcasing professional software engineering skills and projects from Silicon Valley experience.
 
 ## 🚀 Features
 
@@ -58,9 +58,9 @@ This portfolio is designed to work with GitHub Pages. Simply push your changes t
 ## 📝 Customization
 
 ### Personal Information
-- Update the name, title, and description in the HTML
-- Replace placeholder images with your own photos
-- Modify contact information and social links
+- Portfolio showcases Renato Silveira's experience at Silicon Valley companies
+- Features real projects from GitHub repositories
+- Includes actual contact information and professional background
 
 ### Styling
 - Customize colors in the CSS custom properties (`:root` section)
@@ -68,9 +68,9 @@ This portfolio is designed to work with GitHub Pages. Simply push your changes t
 - Add your own animations and effects
 
 ### Content
-- Update the about section with your personal story
-- Add your real projects and experience
-- Modify skills and technologies to match your expertise
+- About section reflects Renato's journey from Brazil to Silicon Valley
+- Real projects from GitHub including in.orbit, Be The Hero, and Safe Economy API
+- Skills showcase actual technologies used at Wander, Kea, and Holonic
 
 ## 🔧 Browser Support
 
@@ -89,9 +89,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📞 Contact
 
-Alex Johnson - [@yourtwitter](https://twitter.com/yourtwitter) - alex.johnson@email.com
+Renato Silveira - [LinkedIn](https://www.linkedin.com/in/renato-silveira/) - renatosilveira99@hotmail.com
 
-Project Link: [https://github.com/yourusername/portfolio](https://github.com/yourusername/portfolio)
+Project Link: [https://github.com/renatosilveira99/renatosilveira99.github.io](https://github.com/renatosilveira99/renatosilveira99.github.io)
 
 ---
 
